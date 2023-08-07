@@ -1,0 +1,19 @@
+# yamllint disable rule:line-length
+---
+###############################################################
+#                         Users Database                      #
+###############################################################
+
+# This file can be used if you do not have an LDAP set up.
+
+users:
+  root:
+    disabled: false
+    displayname: "Root"
+    password: "ARGON_PASSWORD" # Password is 'authelia'
+    email: EMAIL_TO_CHANGE
+    groups:
+      - admins
+      - dev
+---
+# yamllint enable rule:line-length

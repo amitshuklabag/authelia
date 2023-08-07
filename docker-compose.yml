@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+  authelia:
+    image: authelia/authelia:${SOFTWARE_VERSION_TAG}
+    volumes:
+      - ./config:/config
+    ports:
+      - 172.17.0.1:9091:9091
+    restart: always
+    environment:
+      - TZ=America/Chicago
